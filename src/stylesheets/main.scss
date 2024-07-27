@@ -1,3 +1,388 @@
 /* Your styles go here */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+$heading-font: "Work Sans", sans-serif;
+$body-font: "Questrial", sans-serif;
+
+$primary:       #5FABAB;
+$secondary:     #386B6B;
+$success:       #234343;
+$info:          #A1CECE;
+$warning:       #333333;
+$danger:        #D6E0E2;
+$light:         #FCFCFC;
+$dark:          #1F1F1F;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* BODY */
+
+body{
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADERS + PARAGRAPHS */
+
+h1{
+    font-family: $heading-font;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: $heading-font;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h3{
+    font-family: $body-font;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h4{
+    font-family: $body-font;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+p{
+    font-family: $body-font;
+    font-size: 16px;
+}
+
+
+/* HEADING - LARGE SCREEN */
+
+@media (min-width: 992px) {
+    h1{
+        font-size: 81px;
+    }
+
+    h2{
+        font-size: 48px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 24px;
+    }
+}
+
+
+/* LINKS */
+
+.link-1 a{
+    color: $light;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $dark;
+    border: 1px solid $light;
+    border-radius: 1.5rem;
+    padding: .5rem 1.5rem;
+}
+
+.link-1 a:hover{
+    color: $dark;
+    text-decoration: none;
+    background-color: $light;
+    border-color: $dark;
+    border-radius: 1.5rem;
+}
+
+.link-2 a{
+    color: $dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 1.5rem;
+    padding: .5rem 1.5rem;
+}
+
+.link-2 a:hover{
+    color: $primary;
+    text-decoration: none;
+    background-color: $dark;
+    border-color: $primary;
+    border-radius: 1.5rem;
+}
+
+.link-3 a{
+    color: $dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $light;
+    border: 1px solid $dark;
+    border-radius: 1.5rem;
+    padding: .5rem 1.5rem;
+}
+
+.link-3 a:hover{
+    color: $light;
+    text-decoration: none;
+    background-color: $dark;
+    border-color: $dark;
+    border-radius: 1.5rem;
+}
+
+.link-4 a{
+    color: $light;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    border-radius: 1.5rem;
+    padding: .5rem 1.5rem;
+}
+
+.link-4 a:hover{
+    color: $secondary;
+    text-decoration: none;
+    background-color: $light;
+    border-color: $secondary;
+    border-radius: 1.5rem;
+}
+
+/* MAIN NAVIGATION BAR */
+
+nav{
+    .navbar-brand{
+        font-size: 36px;
+    }
+    .active-page{
+        border-bottom: 1px solid $light;
+    }
+
+    .nav-link:hover{
+        border-bottom: 1px solid $light;
+    }
+
+}
+
+/* FOOTER */
+
+#footer-sm{            
+    a{
+        text-decoration: none;
+        color: $light;
+        text-transform: uppercase;
+    }
+
+    a:hover{
+        color: $primary;
+    }
+}
+
+#footer-md{
+    ul{
+        li{
+            list-style: none;
+            
+            a{
+                text-decoration: none;
+                color: $light;
+                text-transform: uppercase;
+            }
+
+            a:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+#footer-lg{
+    ul{
+        li{
+            list-style: none;
+            
+            a{
+                text-decoration: none;
+                color: $light;
+                text-transform: uppercase;
+            }
+
+            a:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* HOME PAGE */
+
+.scale-1-left{
+    border-left: 1px solid $light;
+    border-top: 1px solid $light;
+    border-bottom: 1px solid $light;
+    border-radius: 1.5rem 0 0 1.5rem;
+    height: 1.5rem;
+    background-color: $primary;
+}
+
+.scale-1-right{
+    border: 1px solid $light;
+    border-radius: 0 1.5rem 1.5rem 0;
+    height: 1.5rem;
+}
+
+.list-item-1{
+    color: $light;
+    background-color: $dark;
+    border-bottom: 1px solid $light;
+}
+
+.scale-25{
+    width: 3.75rem;
+}
+
+.scale-50{
+    width: 7.5rem;
+}
+
+.scale-75{
+    width: 11.25rem;
+}
+
+
+@media (min-width: 768px) {
+    .scale-1-left{
+        border-left: 1px solid $light;
+        border-top: 1px solid $light;
+        border-bottom: 1px solid $light;
+        border-radius: 1.5rem 0 0 1.5rem;
+        height: 1.75rem;
+        background-color: $primary;
+    }
+
+    .scale-1-right{
+        border: 1px solid $light;
+        border-radius: 0 1.5rem 1.5rem 0;
+        height: 1.75rem;
+    }
+
+    .scale-25{
+        width: 5rem;
+    }
+
+    .scale-50{
+        width: 10rem;
+    }
+
+    .scale-75{
+        width: 15rem;
+    }
+
+}
+
+.accordion-button{
+    color: $light;
+}
+
+
+.carousel-item{
+    height: 35rem;
+    align-content: center;
+}
+
+@media (min-width: 768px) {
+    .carousel-item{
+        height: 27.5rem;
+        align-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-item{
+        height: 25rem;
+        align-content: center;
+    }
+}
+
+/* CONTACT PAGE */
+#contact-banner{
+    a{
+        text-decoration: none;
+        color: $light;
+    }
+    .contact-text{
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+}
+
+/* ABOUT PAGE */
+#about-skills{
+    ul{
+
+        list-style: none;
+
+        li{
+            padding: .5rem 0;
+        }
+    }
+}
+
+.scale-2-left{
+    border-left: 1px solid $dark;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+    border-radius: 1.5rem 0 0 1.5rem;
+    height: 1.5rem;
+    background-color: $secondary;
+}
+
+.scale-2-right{
+    border: 1px solid $dark;
+    border-radius: 0 1.5rem 1.5rem 0;
+    height: 1.5rem;
+}
+
+.list-item-2{
+    background-color: $light;
+    border-bottom: 1px solid $dark;
+}
+
+
+@media (min-width: 768px) {
+    .scale-2-left{
+        border-left: 1px solid $dark;
+        border-top: 1px solid $dark;
+        border-bottom: 1px solid $dark;
+        border-radius: 1.5rem 0 0 1.5rem;
+        height: 1.75rem;
+        background-color: $secondary;
+    }
+
+    .scale-2-right{
+        border: 1px solid $dark;
+        border-radius: 0 1.5rem 1.5rem 0;
+        height: 1.75rem;
+    }
+}
